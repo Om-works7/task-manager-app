@@ -1,6 +1,6 @@
 import { Component, computed, inject, signal } from '@angular/core';
 import { Task } from '../../../../shared/models/task.model';
-import { TaskService } from '../../../../core/services/task.service';
+import { TaskService } from '../../../../core/services/task/task.service';
 import { TaskListComponent } from "../../components/task-list/task-list.component";
 import { TaskFormComponent } from "../../components/task-form/task-form.component";
 import { FilterBarComponent } from "../../components/filter-bar/filter-bar.component";

@@ -1,6 +1,6 @@
 import { Injectable, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Task } from '../../shared/models/task.model';
+import { Task } from '../../../shared/models/task.model';
 
 @Injectable({ providedIn: 'root' })
 export class TaskService {
