@@ -32,8 +32,15 @@ export class TaskPageComponent {
 
   showModal = signal(false);
 
-  
-  setFilter(value: any) {
+  ngOnInit() {
+    this.getAllTasks();
+  }
+
+  getAllTasks() {
+    this.taskService.loadTasks();
+  }
+
+  setFilter(value: 'all' | 'completed' | 'pending') {
     this.filter.set(value);
   }
 

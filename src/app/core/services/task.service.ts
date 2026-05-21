@@ -1,34 +1,42 @@
-import { Injectable, signal, computed } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { Task } from '../../shared/models/task.model';
-
 
 @Injectable({ providedIn: 'root' })
 export class TaskService {
 
+  private api = 'http://localhost:3000/tasks';
+
   tasks = signal<Task[]>([]);
   tasks$ = this.tasks;
 
-  completedTasks = computed(() =>
-    this.tasks().filter(t => t.completed)
-  );
+  constructor(private http: HttpClient) {}
 
-  pendingTasks = computed(() =>
-    this.tasks().filter(t => !t.completed)
-  );
-
+  loadTasks() {
+    this.http.get<Task[]>(this.api).subscribe(data => {
+      this.tasks.set(data);
+    });
+  }
+  
   addTask(task: Task) {
-    this.tasks.update(prev => [...prev, task]);
+    this.http.post<Task>(this.api, task).subscribe(newTask => {
+      this.tasks.update(prev => [...prev, newTask]);
+    });
   }
 
   deleteTask(id: string) {
-    this.tasks.update(prev => prev.filter(t => t.id !== id));
+    this.http.delete(`${this.api}/${id}`).subscribe(() => {
+      this.tasks.update(prev => prev.filter(t => t.id !== id));
+    });
   }
 
   toggleTask(id: string) {
-    this.tasks.update(prev =>
-      prev.map(t =>
-        t.id === id ? { ...t, completed: !t.completed } : t
-      )
-    );
+    this.http.patch(`${this.api}/${id}`, {}).subscribe(() => {
+      this.tasks.update(prev =>
+        prev.map(t =>
+          t.id === id ? { ...t, completed: !t.completed } : t
+        )
+      );
+    });
   }
 }
