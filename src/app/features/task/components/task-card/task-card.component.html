@@ -1,0 +1,11 @@
+
+<div>
+      <h4>{{ task.title }}</h4>
+      <p>{{ task.description }}</p>
+
+      <button (click)="toggle.emit(task.id)">
+        {{ task.completed ? 'Undo' : 'Complete' }}
+      </button>
+
+      <button (click)="delete.emit(task.id)">Delete</button>
+</div>

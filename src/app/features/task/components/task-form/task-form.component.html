@@ -1,0 +1,14 @@
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <input formControlName="title" placeholder="Title" />
+      <textarea formControlName="description"></textarea>
+
+      <select formControlName="priority">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+
+      <button type="submit">Save</button>
+      <button type="button" (click)="close.emit()">Cancel</button>
+</form>

@@ -1,0 +1,21 @@
+
+   <h2>Task Manager</h2>
+
+    <app-filter-bar (filterChange)="setFilter($event)" />
+
+    <app-task-list
+      [tasks]="filteredTasks()"
+      (delete)="deleteTask($event)"
+      (toggle)="toggleTask($event)"
+    />
+
+    <button (click)="openModal()">Add Task</button>
+
+    
+  @if(showModal()) {
+    <app-task-form
+    (close)="closeModal()"
+    (save)="addTask($event)"
+  />
+}
+
