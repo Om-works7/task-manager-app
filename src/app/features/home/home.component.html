@@ -1,0 +1,22 @@
+<div class="home-container">
+
+  <h1>Welcome to Task Manager</h1>
+
+  @if (!isLoggedIn()) {
+    <div class="login-section">
+      <p>Please login to manage your tasks</p>
+      <button (click)="login()">Login</button>
+    </div>
+  } @else {
+    <div class="dashboard-preview">
+      <p>You are logged in ✅</p>
+
+      <button class="logout-btn" (click)="logout()">Logout</button>
+
+      <div class="actions">
+        <a routerLink="/tasks">Go to Tasks</a>
+      </div>
+    </div>
+  }
+
+</div>

@@ -1,0 +1,37 @@
+.home-container {
+  text-align: center;
+  margin-top: 60px;
+  font-family: Arial, sans-serif;
+}
+
+.login-section {
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #125ca1;
+}
+
+.logout-btn {
+  background-color: #d32f2f;
+}
+
+.actions {
+  margin-top: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #1976d2;
+  font-weight: bold;
+}
+``
