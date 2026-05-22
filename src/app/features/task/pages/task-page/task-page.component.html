@@ -13,9 +13,14 @@
 
     
   @if(showModal()) {
+    @defer{
     <app-task-form
     (close)="closeModal()"
     (save)="addTask($event)"
-  />
+    />
+    }@loading {
+      <p>Loading form...</p>
+    }
+
 }
 

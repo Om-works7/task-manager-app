@@ -12,6 +12,12 @@ import { AutofocusDirective } from '../../../../shared/directives/autofocus/auto
 export class TaskFormComponent {
 
   private fb = new FormBuilder();
+
+  
+ngOnInit() {
+  console.log('Task form loaded!');
+}
+
   
 
   @Output() save = new EventEmitter<any>()
