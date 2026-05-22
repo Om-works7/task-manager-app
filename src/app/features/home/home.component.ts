@@ -1,4 +1,6 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
+import { AuthService } from '../../core/services/auth/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,14 +10,11 @@ import { Component, signal } from '@angular/core';
 })
 export class HomeComponent {
 
-  isLoggedIn = signal(false);
+  authService = inject(AuthService);
+  router: Router = inject(Router);
 
   login() {
-    this.isLoggedIn.set(true);
+    this.authService.login();
+    this.router.navigate(['/tasks']);
   }
-
-  logout() {
-    this.isLoggedIn.set(false);
-  }
-
 }
