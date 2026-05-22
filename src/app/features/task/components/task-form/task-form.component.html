@@ -1,6 +1,6 @@
 
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
-      <input formControlName="title" placeholder="Title" />
+      <input appAutofocus formControlName="title" placeholder="Title" />
       <textarea formControlName="description"></textarea>
 
       <select formControlName="priority">

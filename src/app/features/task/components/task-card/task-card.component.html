@@ -1,6 +1,6 @@
 
-<div>
-      <h4>{{ task.title }}</h4>
+<div [appHighlight]="task.completed" [appPriorityColor]="task.priority" appOnHoverHighlight >
+      <h4 >{{ task.title }}</h4>
       <p>{{ task.description }}</p>
 
       <button (click)="toggle.emit(task.id)">

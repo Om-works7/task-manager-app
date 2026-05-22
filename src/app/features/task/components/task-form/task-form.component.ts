@@ -1,9 +1,11 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { AutofocusDirective } from '../../../../shared/directives/autofocus/autofocus.directive';
+
 
 @Component({
   selector: 'app-task-form',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, AutofocusDirective],
   templateUrl: './task-form.component.html',
   styleUrl: './task-form.component.css'
 })
