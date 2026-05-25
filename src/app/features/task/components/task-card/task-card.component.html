@@ -1,11 +1,15 @@
 
 <div [appHighlight]="task.completed" [appPriorityColor]="task.priority" appOnHoverHighlight >
       <h4 >{{ task.title }}</h4>
-      <p>{{ task.description }}</p>
+      <p>{{ task.description | truncate:10 }}</p>
+      
 
       <button (click)="toggle.emit(task.id)">
         {{ task.completed ? 'Undo' : 'Complete' }}
       </button>
+      
+      <p>{{ task.completed | taskStatus }}</p>
 
       <button (click)="delete.emit(task.id)">Delete</button>
+      <span>{{ task.createdAt | date:'short' }}</span>
 </div>

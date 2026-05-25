@@ -4,7 +4,7 @@
     "title": "go to gym",
     "description": "eat preworkout before going to the gym",
     "priority": "medium",
-    "completed": true,
+    "completed": false,
     "createdAt": "2026-05-22T05:23:13.582Z"
   },
   {
@@ -20,7 +20,7 @@
     "title": "asdfas",
     "description": "asdfasd",
     "priority": "high",
-    "completed": true,
+    "completed": false,
     "createdAt": "2026-05-22T05:23:28.879Z"
   },
   {
@@ -38,13 +38,5 @@
     "priority": "low",
     "completed": false,
     "createdAt": "2026-05-22T07:31:47.550Z"
-  },
-  {
-    "id": "daad68fb-76b2-4295-897a-ed1f6d69211f",
-    "title": "asdsa",
-    "description": "asdsa",
-    "priority": "low",
-    "completed": false,
-    "createdAt": "2026-05-22T07:31:51.009Z"
   }
 ]
