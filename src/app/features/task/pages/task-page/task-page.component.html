@@ -1,11 +1,46 @@
+<h2>Task Manager</h2>
 
+<app-search-bar (searchChange)="setSearch($event)"></app-search-bar>
+
+<app-filter-bar (filterChange)="setFilter($event)"></app-filter-bar>
+
+
+@if (tasks$ | async; as tasks) {
+
+  <app-task-list
+    [tasks]="tasks"
+    (delete)="deleteTask($event)"
+    (toggle)="toggleTask($event)"
+  />
+
+} @else {
+  <p>Loading tasks...</p>
+}
+
+<button (click)="openModal()">Add Task</button>
+
+
+@if (showModal()) {
+  @defer {
+    <app-task-form
+      (close)="closeModal()"
+      (save)="addTask($event)"
+    />
+  } @loading {
+    <p>Loading form...</p>
+  }
+}
+
+
+
+<!-- 
    <h2>Task Manager</h2>
 
+    <app-search-bar (searchChange)="setSearch($event)"/>
+   
     <app-filter-bar (filterChange)="setFilter($event)" />
 
-    <app-search-bar
-      (searchChange)="setSearch($event)">
-    </app-search-bar>
+
 
     <app-task-list
       [tasks]="filteredTasks()"
@@ -27,4 +62,4 @@
     }
 
 }
-
+ -->
