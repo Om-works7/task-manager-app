@@ -3,6 +3,10 @@
 
     <app-filter-bar (filterChange)="setFilter($event)" />
 
+    <app-search-bar
+      (searchChange)="setSearch($event)">
+    </app-search-bar>
+
     <app-task-list
       [tasks]="filteredTasks()"
       (delete)="deleteTask($event)"

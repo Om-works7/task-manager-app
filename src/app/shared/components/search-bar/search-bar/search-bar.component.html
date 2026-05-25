@@ -1,1 +1,9 @@
-<input (input)="search$.next($event.target.value)" placeholder="Search tasks" />
+<input
+  type="text"
+  placeholder="Search tasks..."
+  (input)="onSearch($any($event.target).value)"
+/>
+
+<!-- <button (click)="onFilterChange('all')">All</button>
+<button (click)="onFilterChange('completed')">Completed</button>
+<button (click)="onFilterChange('pending')">Pending</button> -->

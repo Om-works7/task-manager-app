@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, inject, Output } from '@angular/core';
 import { debounceTime, Subject } from 'rxjs';
+import { TaskService } from '../../../../core/services/task/task.service';
+
 
 @Component({
   selector: 'app-search-bar',
@@ -9,14 +11,28 @@ import { debounceTime, Subject } from 'rxjs';
 })
 export class SearchBarComponent {
 
-  search$ = new Subject<string>();
+  private taskService = inject(TaskService);
+  tasks$ = this.taskService.loadTasks();
+  private searchSubject = new Subject<string>();
+  @Output() searchChange = new EventEmitter<string>();
+  // @Output() filterChange = new EventEmitter<'all' | 'completed' | 'pending'>();
+  
 
   ngOnInit() {
-    this.search$
-    .pipe(debounceTime(300))
+    this.searchSubject
+    .pipe(debounceTime(500))
     .subscribe(value => {
-      this.filterSearch(value);
+      this.searchChange.emit(value);
     })
   }
+
+  
+  onSearch(value: string) {
+    this.searchSubject.next(value);
+  }
+
+  // onFilterChange(filter: 'all' | 'completed' | 'pending') {
+  //   this.filterChange.emit(filter);
+  // }
 
 }
