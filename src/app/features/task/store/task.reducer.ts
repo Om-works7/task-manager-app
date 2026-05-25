@@ -17,6 +17,11 @@ const initialState: TaskState = {
 export const taskReducer = createReducer(
   initialState,
 
+  on(TaskActions.loadTasksSuccess,(state,{tasks})=>({
+    ...state,
+    tasks
+  })),
+
   on(TaskActions.setTasks, (state, { tasks }) => ({
     ...state,
     tasks
@@ -26,11 +31,23 @@ export const taskReducer = createReducer(
     ...state,
     tasks: [...state.tasks, task]
   })),
+  
+on(TaskActions.addTaskSuccess, (state, { task }) => ({
+  ...state,
+  tasks: [...state.tasks, task]
+})),
+
 
   on(TaskActions.deleteTask, (state, { id }) => ({
     ...state,
     tasks: state.tasks.filter(t => t.id !== id)
   })),
+  
+on(TaskActions.deleteTaskSuccess, (state, { id }) => ({
+  ...state,
+  tasks: state.tasks.filter(t => t.id !== id)
+})),
+
 
   on(TaskActions.toggleTask, (state, { id }) => ({
     ...state,
@@ -38,6 +55,15 @@ export const taskReducer = createReducer(
       t.id === id ? { ...t, completed: !t.completed } : t
     )
   })),
+
+  
+on(TaskActions.toggleTaskSuccess, (state, { id }) => ({
+  ...state,
+  tasks: state.tasks.map(t =>
+    t.id === id ? { ...t, completed: !t.completed } : t
+  )
+})),
+
 
   on(TaskActions.setFilter, (state, { filter }) => ({
     ...state,

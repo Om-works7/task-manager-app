@@ -8,6 +8,7 @@ import { provideStore } from '@ngrx/store';
 import { provideEffects } from '@ngrx/effects';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
 import { taskReducer } from './features/task/store/task.reducer';
+import { TaskEffects } from './features/task/store/task.effects';
 
 export const appConfig: ApplicationConfig = {
   providers: [provideZoneChangeDetection({ eventCoalescing: true }),
@@ -16,6 +17,6 @@ export const appConfig: ApplicationConfig = {
     provideStore({
       tasks: taskReducer
     }), 
-    provideEffects(), 
+    provideEffects([TaskEffects]), 
     provideStoreDevtools({ maxAge: 25, logOnly: !isDevMode() })]
 };

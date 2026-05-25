@@ -26,18 +26,7 @@ export class TaskPageComponent {
   showModal = signal(false);
 
   ngOnInit() {
-    const mockTasks: Task[] = [
-      {
-        id: '1',
-        title: 'Learn Angular',
-        description: 'Practice signals & ngrx',
-        completed: false,
-        priority: 'high',
-        createdAt: new Date()
-      }
-    ];
-
-    this.store.dispatch(TaskActions.setTasks({ tasks: mockTasks }));
+    this.store.dispatch(TaskActions.loadTasks());
   }
 
 

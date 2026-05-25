@@ -4,7 +4,7 @@
     "title": "go to gym",
     "description": "eat preworkout before going to the gym",
     "priority": "medium",
-    "completed": false,
+    "completed": true,
     "createdAt": "2026-05-22T05:23:13.582Z"
   },
   {
@@ -12,7 +12,7 @@
     "title": "sadfasd",
     "description": "asdfasd",
     "priority": "low",
-    "completed": false,
+    "completed": true,
     "createdAt": "2026-05-22T05:23:24.449Z"
   },
   {

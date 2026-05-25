@@ -12,7 +12,7 @@ import { TaskService } from '../../../../core/services/task/task.service';
 export class SearchBarComponent {
 
   private taskService = inject(TaskService);
-  tasks$ = this.taskService.loadTasks();
+  // tasks$ = this.taskService.loadTasks();
   private searchSubject = new Subject<string>();
   @Output() searchChange = new EventEmitter<string>();
   // @Output() filterChange = new EventEmitter<'all' | 'completed' | 'pending'>();

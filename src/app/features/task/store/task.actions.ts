@@ -2,6 +2,11 @@ import { createAction, props } from "@ngrx/store";
 import { Task } from "../../../shared/models/task.model";
 
 
+export const loadTasksSuccess = createAction(
+  '[Task] Load Tasks Success',
+  props<{ tasks: Task[] }>()
+);
+
 export const loadTasks = createAction('[Task] Load Tasks');
 
 export const setTasks = createAction(
@@ -14,15 +19,36 @@ export const addTask = createAction(
   props<{ task: Task }>()
 );
 
+
+export const addTaskSuccess = createAction(
+  '[Task] Add Task Success',
+  props<{ task: Task }>()
+);
+
+
 export const deleteTask = createAction(
   '[Task] Delete Task',
   props<{ id: string }>()
 );
 
+
+export const deleteTaskSuccess = createAction(
+  '[Task] Delete Task Success',
+  props<{ id: string }>()
+);
+
+
 export const toggleTask = createAction(
   '[Task] Toggle Task',
   props<{ id: string }>()
 );
+
+
+export const toggleTaskSuccess = createAction(
+  '[Task] Toggle Task Success',
+  props<{ id: string }>()
+);
+
 
 export const setFilter = createAction(
   '[Task] Set Filter',
