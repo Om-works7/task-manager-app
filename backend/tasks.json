@@ -1,13 +1,5 @@
 [
   {
-    "id": "bb59a8c6-49b2-48da-9f40-fb4fa5312d8b",
-    "title": "go to gym",
-    "description": "today ",
-    "priority": "medium",
-    "completed": false,
-    "createdAt": "2026-05-25T14:08:14.836Z"
-  },
-  {
     "id": "a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d",
     "title": "Drink water",
     "description": "Track 3 litres today",
@@ -20,7 +12,7 @@
     "title": "Prep meals",
     "description": "Cook healthy lunches for tomorrow",
     "priority": "medium",
-    "completed": false,
+    "completed": true,
     "createdAt": "2026-05-25T14:10:05.000Z"
   },
   {
@@ -28,7 +20,7 @@
     "title": "Stretch",
     "description": "Do 10 minutes of mobility work",
     "priority": "low",
-    "completed": false,
+    "completed": true,
     "createdAt": "2026-05-25T14:10:10.000Z"
   },
   {
@@ -36,7 +28,7 @@
     "title": "Clear inbox",
     "description": "Organize emails to reach zero",
     "priority": "high",
-    "completed": false,
+    "completed": true,
     "createdAt": "2026-05-25T14:10:15.000Z"
   },
   {
@@ -44,7 +36,7 @@
     "title": "Plan week",
     "description": "Schedule top priorities and meetings",
     "priority": "high",
-    "completed": false,
+    "completed": true,
     "createdAt": "2026-05-25T14:10:20.000Z"
   },
   {
@@ -52,7 +44,7 @@
     "title": "Read book",
     "description": "Complete 10 pages of choice",
     "priority": "low",
-    "completed": false,
+    "completed": true,
     "createdAt": "2026-05-25T14:10:25.000Z"
   },
   {

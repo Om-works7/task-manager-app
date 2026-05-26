@@ -7,7 +7,7 @@ export class OnHoverHighlightDirective {
 
   constructor() { }
 
-  @HostBinding('style.backgroundColor') bg = 'pink';
+  @HostBinding('style.backgroundColor') bg = 'white';
 
   
   @HostListener('mouseenter')
@@ -17,7 +17,7 @@ export class OnHoverHighlightDirective {
 
   @HostListener('mouseleave')
   onLeave() {
-    this.bg = 'pink';
+    this.bg = 'white';
   }
 
 

@@ -1,0 +1,71 @@
+.form-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.form-actions button {
+  flex: 1;
+}   
+
+/* Form container */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 300px;
+  margin: auto;
+  padding: 15px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Custom input components */
+app-input {
+  display: block;
+}
+
+/* Select dropdown */
+select {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+/* Select focus */
+select:focus {
+  border-color: #1bb9c7;
+}
+
+/* Buttons container */
+form button {
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Save button */
+button[type="submit"] {
+  background-color: #1bb9c7;
+  color: white;
+}
+
+/* Save hover */
+button[type="submit"]:hover {
+  background-color: #159aa7;
+}
+
+/* Cancel button */
+button[type="button"] {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+/* Cancel hover */
+button[type="button"]:hover {
+  background-color: #c7c7c7;
+}

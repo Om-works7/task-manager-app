@@ -1,0 +1,31 @@
+/* Container */
+.filter-group {
+  display: flex;
+  gap: 10px;
+}
+
+/* Buttons */
+.filter-group button {
+  padding: 8px 16px;
+  border: 2px solid #1bb9c7;
+  background: white;
+  color: #1bb9c7;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.filter-group button:hover {
+  background-color: #1bb9c7;
+  color: white;
+  transform: translateY(-1px);
+}
+
+/* Active button (apply class dynamically) */
+.filter-group button.active {
+  background-color: #1bb9c7;
+  color: white;
+  box-shadow: 0 3px 8px rgba(27, 185, 199, 0.3);
+}

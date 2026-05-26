@@ -1,0 +1,26 @@
+input[type="text"] {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px 15px;
+  border: 2px solid #1bb9c7;
+  border-radius: 25px;
+  outline: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+/* Placeholder styling */
+input::placeholder {
+  color: #999;
+}
+
+/* Focus effect */
+input:focus {
+  border-color: #159aa7;
+  box-shadow: 0 0 8px rgba(27, 185, 199, 0.3);
+}
+
+/* Optional hover effect */
+input:hover {
+  border-color: #159aa7;
+}

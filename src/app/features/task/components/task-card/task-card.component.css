@@ -1,0 +1,103 @@
+/* Global */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f4f9fb;
+  color: #333;
+}
+
+/* Task Card */
+.task-card {
+  background: #ffffff;
+  border-left: 4px solid #1bb9c7;
+  border-radius: 8px;
+  padding: 12px 15px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+/* Main section */
+.task-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Left content */
+.task-content {
+  flex: 1;
+}
+
+/* Title */
+.task-content h4 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #222;
+}
+
+/* Completed title */
+.task-content h4.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* Description */
+.task-desc {
+  margin: 4px 0 0 0;
+  font-size: 13px;
+  color: #666;
+}
+
+/* Checkbox section */
+.task-check {
+  margin-left: 10px;
+}
+
+/* Checkbox styling */
+.task-check input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #1bb9c7;
+}
+
+/* Footer */
+.task-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* Delete icon */
+.delete-icon {
+  cursor: pointer;
+  font-size: 16px;
+  color: #c5615e;
+}
+
+/* Hover minimal (not fancy) */
+.delete-icon:hover {
+  color: #b52b27;
+}
+
+/* Meta (status + date) */
+.task-meta {
+  display: flex;
+  gap: 10px;
+  font-size: 12px;
+  color: #777;
+}
+
+/* Status */
+.status {
+  color: #1bb9c7;
+  font-weight: 500;
+}
+
+/* Date */
+.date {
+  color: #999;
+}

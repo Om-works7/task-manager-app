@@ -1,15 +1,51 @@
+<div class="task-card"
+     [appHighlight]="task.completed"
+     [appPriorityColor]="task.priority"
+     appOnHoverHighlight>
 
-<div [appHighlight]="task.completed" [appPriorityColor]="task.priority" appOnHoverHighlight >
-      <h4 >{{ task.title }}</h4>
-      <p>{{ task.description | truncate:10 }}</p>
-      
 
-      <button (click)="toggle.emit(task.id)">
-        {{ task.completed ? 'Undo' : 'Complete' }}
-      </button>
-      
-      <p>{{ task.completed | taskStatus }}</p>
+  <div class="task-main">
 
-      <button (click)="delete.emit(task.id)">Delete</button>
-      <span>{{ task.createdAt | date:'short' }}</span>
+
+    <div class="task-content">
+      <h4 [class.completed]="task.completed">
+        {{ task.title }}
+      </h4>
+
+      <p class="task-desc">
+        {{ task.description | truncate:30 }}
+      </p>
+    </div>
+
+ 
+    <div class="task-check">
+      <input 
+        type="checkbox" 
+        [checked]="task.completed"
+        (change)="toggle.emit(task.id)" 
+      />
+    </div>
+
+  </div>
+
+
+  <div class="task-footer">
+
+   
+    <span class="delete-icon" (click)="delete.emit(task.id)">
+      remove
+    </span>
+
+
+    <div class="task-meta">
+      <span class="status">
+        {{ task.completed | taskStatus }}
+      </span>
+      <span class="date">
+        {{ task.createdAt | date:'short' }}
+      </span>
+    </div>
+
+  </div>
+
 </div>
