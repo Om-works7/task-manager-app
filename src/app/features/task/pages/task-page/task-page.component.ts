@@ -21,7 +21,6 @@ export class TaskPageComponent {
 
   private store = inject(Store);
 
-  // comes from ngrx (Observable)
   tasks$ = this.store.select(TaskSelectors.selectFilteredTasks);
   showModal = signal(false);
 
