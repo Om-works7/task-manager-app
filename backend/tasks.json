@@ -6,5 +6,101 @@
     "priority": "medium",
     "completed": false,
     "createdAt": "2026-05-25T14:08:14.836Z"
+  },
+  {
+    "id": "a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d",
+    "title": "Drink water",
+    "description": "Track 3 litres today",
+    "priority": "high",
+    "completed": false,
+    "createdAt": "2026-05-25T14:10:00.000Z"
+  },
+  {
+    "id": "b2c3d4e5-f6a7-8b9c-0d1e-2f3a4b5c6d7e",
+    "title": "Prep meals",
+    "description": "Cook healthy lunches for tomorrow",
+    "priority": "medium",
+    "completed": false,
+    "createdAt": "2026-05-25T14:10:05.000Z"
+  },
+  {
+    "id": "c3d4e5f6-a7b8-9c0d-1e2f-3a4b5c6d7e8f",
+    "title": "Stretch",
+    "description": "Do 10 minutes of mobility work",
+    "priority": "low",
+    "completed": false,
+    "createdAt": "2026-05-25T14:10:10.000Z"
+  },
+  {
+    "id": "d4e5f6a7-b8c9-0d1e-2f3a-4b5c6d7e8f9a",
+    "title": "Clear inbox",
+    "description": "Organize emails to reach zero",
+    "priority": "high",
+    "completed": false,
+    "createdAt": "2026-05-25T14:10:15.000Z"
+  },
+  {
+    "id": "e5f6a7b8-c9d0-1e2f-3a4b-5c6d7e8f9a0b",
+    "title": "Plan week",
+    "description": "Schedule top priorities and meetings",
+    "priority": "high",
+    "completed": false,
+    "createdAt": "2026-05-25T14:10:20.000Z"
+  },
+  {
+    "id": "f6a7b8c9-d0e1-2f3a-4b5c-6d7e8f9a0b1c",
+    "title": "Read book",
+    "description": "Complete 10 pages of choice",
+    "priority": "low",
+    "completed": false,
+    "createdAt": "2026-05-25T14:10:25.000Z"
+  },
+  {
+    "id": "a7b8c9d0-e1f2-3a4b-5c6d-7e8f9a0b1c2d",
+    "title": "Buy groceries",
+    "description": "Restock fresh fruits and vegetables",
+    "priority": "medium",
+    "completed": false,
+    "createdAt": "2026-05-25T14:10:30.000Z"
+  },
+  {
+    "id": "b8c9d0e1-f2a3-4b5c-6d7e-8f9a0b1c2d3e",
+    "title": "Pay bills",
+    "description": "Check and clear outstanding utilities",
+    "priority": "high",
+    "completed": false,
+    "createdAt": "2026-05-25T14:10:35.000Z"
+  },
+  {
+    "id": "c9d0e1f2-a3b4-5c6d-7e8f-9a0b1c2d3e4f",
+    "title": "Clean room",
+    "description": "Tidy up workspace and bed",
+    "priority": "low",
+    "completed": false,
+    "createdAt": "2026-05-25T14:10:40.000Z"
+  },
+  {
+    "id": "d0e1f2a3-b4c5-6d7e-8f9a-0b1c2d3e4f5a",
+    "title": "Laundry",
+    "description": "Wash and fold weekly clothes",
+    "priority": "medium",
+    "completed": false,
+    "createdAt": "2026-05-25T14:10:45.000Z"
+  },
+  {
+    "id": "a0ce3fe4-7ca8-4d5f-a17a-6244b2712a93",
+    "title": "drink water",
+    "description": "water",
+    "priority": "low",
+    "completed": false,
+    "createdAt": "2026-05-25T14:10:19.714Z"
+  },
+  {
+    "id": "1b591ddd-5243-454c-b787-bcc374ae31e6",
+    "title": "play chess",
+    "description": "on chess.com",
+    "priority": "low",
+    "completed": false,
+    "createdAt": "2026-05-25T14:18:37.033Z"
   }
 ]

@@ -27,10 +27,10 @@ export const taskReducer = createReducer(
     tasks
   })),
 
-  on(TaskActions.addTask, (state, { task }) => ({
-    ...state,
-    tasks: [...state.tasks, task]
-  })),
+  // on(TaskActions.addTask, (state, { task }) => ({
+  //   ...state,
+  //   tasks: [...state.tasks, task]
+  // })),
   
 on(TaskActions.addTaskSuccess, (state, { task }) => ({
   ...state,
@@ -38,10 +38,10 @@ on(TaskActions.addTaskSuccess, (state, { task }) => ({
 })),
 
 
-  on(TaskActions.deleteTask, (state, { id }) => ({
-    ...state,
-    tasks: state.tasks.filter(t => t.id !== id)
-  })),
+  // on(TaskActions.deleteTask, (state, { id }) => ({
+  //   ...state,
+  //   tasks: state.tasks.filter(t => t.id !== id)
+  // })),
   
 on(TaskActions.deleteTaskSuccess, (state, { id }) => ({
   ...state,
@@ -49,12 +49,12 @@ on(TaskActions.deleteTaskSuccess, (state, { id }) => ({
 })),
 
 
-  on(TaskActions.toggleTask, (state, { id }) => ({
-    ...state,
-    tasks: state.tasks.map(t =>
-      t.id === id ? { ...t, completed: !t.completed } : t
-    )
-  })),
+  // on(TaskActions.toggleTask, (state, { id }) => ({
+  //   ...state,
+  //   tasks: state.tasks.map(t =>
+  //     t.id === id ? { ...t, completed: !t.completed } : t
+  //   )
+  // })),
 
   
 on(TaskActions.toggleTaskSuccess, (state, { id }) => ({
