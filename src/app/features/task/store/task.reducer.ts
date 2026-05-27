@@ -22,10 +22,10 @@ export const taskReducer = createReducer(
     tasks
   })),
 
-  on(TaskActions.setTasks, (state, { tasks }) => ({
-    ...state,
-    tasks
-  })),
+  // on(TaskActions.setTasks, (state, { tasks }) => ({
+  //   ...state,
+  //   tasks
+  // })),
 
   // on(TaskActions.addTask, (state, { task }) => ({
   //   ...state,
